@@ -1,0 +1,18 @@
+# ignore everything
+*
+
+# include directories
+!*/
+
+# Whitelist the .gitignore file itself
+!.gitignore
+
+# whitelist these
+!ghostty/**
+!nvim/**
+!waybar/**
+!wofi/**
+!fastfetch/**
+!dunst/**
+!hypr/**
+!quickshell/**

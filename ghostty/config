@@ -1,0 +1,30 @@
+# background = 181818
+
+font-size = 16
+# catpuccin-frappe
+# catppuccin-macchiato
+theme = gruber-darker
+# macos-titlebar-style = hidden
+window-decoration = false
+
+background-opacity = 0.95
+# Iosevka NF
+font-family = Iosevka NF
+# cursor-style = block_hollow
+# cursor-invert-fg-bg
+cursor-style-blink = false
+cursor-invert-fg-bg = true
+
+window-padding-balance = true 
+window-save-state = always
+macos-titlebar-style=transparent
+window-colorspace = "display-p3"
+
+window-padding-x = 20
+# maybe for tmux: ,0
+window-padding-y = 20
+window-padding-balance = false
+
+font-feature = -liga
+font-feature = -calt
+font-feature = -dlig
