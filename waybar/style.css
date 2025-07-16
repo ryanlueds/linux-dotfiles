@@ -2,7 +2,7 @@
   min-height: 0;
   min-width: 0;
   font-family: Lexend, "Iosevka NF";
-  font-size: 14px;
+  font-size: 10px;
   font-weight: 600;
 }
 
@@ -17,19 +17,19 @@ window#waybar {
 
 #workspaces {
     background-color: transparent;
-    margin: 0.6rem 0;
+    padding: 9px 0;
 }
 
 #workspaces button {
     border: none;
     border-radius: 50%;
     min-height: 14px;
-    min-width: 18px;
+    min-width: 14px;
     margin: 0 5px;
     padding: 0;
     background-color: #e4e4ef;
     color: #e4e4ef;
-    transition: all 0.3s ease;
+    transition: all 0.1s ease;
 }
 
 #workspaces button:hover {
@@ -66,8 +66,8 @@ window#waybar {
 #tray,
 #memory,
 #window {
-  padding: 0.0rem 0.6rem;
-  margin: 0.6rem 0;
+  padding: 0 0.6rem;
+  font-size: 14px;
 }
 
 #custom-sep {
@@ -117,7 +117,7 @@ window#waybar.empty #window {
 #custom-power {
     padding-left: 0.6rem;
     padding-right: 0.3rem;
-  color: #f43841; /* gruber-darker-red */
+    color: #f43841; /* gruber-darker-red */
 }
 
 tooltip {
