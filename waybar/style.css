@@ -15,23 +15,41 @@ window#waybar {
   /* background-color: rgba(24, 24, 37, 0.6); */
 }
 
+#workspaces {
+    background-color: transparent;
+    margin: 0.6rem 0;
+}
+
 #workspaces button {
-  padding: 0.0rem 0.6rem;
-  margin: 0.6rem 0.4rem;
-  border-radius: 6px;
-  /* background-color: #181825; */
-  background-color: #282828; /* gruber-darker-bg */
-  color: #e4e4ef; /* gruber-darker-fg */
+    border: none;
+    border-radius: 50%;
+    min-height: 14px;
+    min-width: 18px;
+    margin: 0 5px;
+    padding: 0;
+    background-color: #e4e4ef;
+    color: #e4e4ef;
+    transition: all 0.3s ease;
 }
 
 #workspaces button:hover {
-  color: #181818; /* gruber-darker-bg */
-  background-color: #e4e4ef; /* gruber-darker-fg */
+  background-color: #f1d5a7;
 }
 
 #workspaces button.active {
-  background-color: #cc8c3c; /* gruber-darker-bg */
-  color: #181818; /* gruber-darker-niagara */
+    min-width: 34px;
+    background-color: #cc8c3c;
+    color: #cc8c3c;
+    border-radius: 9px;
+}
+
+#workspaces button.active + button {
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    background-color: transparent;
+    border: none;
 }
 
 #workspaces button.urgent {
@@ -43,28 +61,13 @@ window#waybar {
 #pulseaudio,
 #custom-logo,
 #custom-power,
-#custom-spotify,
 #custom-notification,
 #cpu,
 #tray,
 #memory,
-#window,
-#mpris {
+#window {
   padding: 0.0rem 0.6rem;
-  margin: 0.6rem 0.4rem;
-  border-style: solid;
-  border-radius: 6px;
-  border-width: 1px;
-  border-color: #383838;
-  background-color: #282828;
-}
-
-#mpris.playing {
-  color: #cc8c3c; /* gruber-darker-green */
-}
-
-#mpris.paused {
-  color: #565f73; /* gruber-darker-niagara-1 */
+  margin: 0.6rem 0;
 }
 
 #custom-sep {
@@ -85,10 +88,6 @@ window#waybar.empty #window {
 }
 
 #clock {
-  color: #e4e4ef; /* gruber-darker-niagara */
-}
-
-#clock.simpleclock {
   color: #e4e4ef; /* gruber-darker-niagara */
 }
 
@@ -124,4 +123,9 @@ window#waybar.empty #window {
 tooltip {
   background-color: #181818; /* gruber-darker-bg */
   border: 2px solid #96a6c8; /* gruber-darker-niagara */
+}
+
+
+tooltip label {
+  color: #e4e4ef; /* gruber-darker-fg */
 }

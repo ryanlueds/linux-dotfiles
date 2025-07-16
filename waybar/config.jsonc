@@ -2,66 +2,34 @@
     "output": ["HDMI-A-2"],
     "layer": "bottom",
     "position": "top",
-    "height": 41,
-    "spacing": 2,
+    "height": 32,
     "exclusive": true,
     "gtk-layer-shell": true,
     "passthrough": false,
     "fixed-center": true,
-    "modules-left": ["hyprland/workspaces", "hyprland/window"],
-    "modules-center": ["mpris"],
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["clock"],
     "modules-right": [
         "cpu",
         "memory",
         "pulseaudio",
-        "clock",
-        "clock#simpleclock",
         "tray",
         "custom/notification",
-        "custom/power",
+        "custom/power"
     ],
-    "custom/spotify": {
-        "format": "  {}",
-        "return-type": "json",
-        "on-click": "playerctl -p spotify play-pause",
-        "on-click-right": "spotifatius toggle-liked",
-        "on-click-middle": "playerctl -p spotify next",
-        "exec": "spotifatius monitor",
-    },
-    "mpris": {
-        "player": "spotify",
-        "dynamic-order": ["artist", "title"],
-        "format": "{player_icon} {dynamic}",
-        "format-paused": "{status_icon} <i>{dynamic}</i>",
-        "max-length": 40,
-        "ellipsis": "…",
-        "status-icons": {
-            "paused": "",
-        },
-        "player-icons": {
-            "default": "",
-        },
-    },
     "hyprland/workspaces": {
         "on-click": "activate",
-        "format": "{id}",
+        "format": "",
         "all-outputs": true,
         "disable-scroll": false,
-        "active-only": false,
-    },
-    "hyprland/window": {
-        "format": "{title}",
+        "active-only": false
     },
     "tray": {
         "show-passive-items": true,
-        "spacing": 10,
-    },
-    "clock#simpleclock": {
-        "tooltip": false,
-        "format": " {:%H:%M}",
+        "spacing": 10
     },
     "clock": {
-        "format": " {:L%a %d %b}",
+        "format": "{:%b %d, %I:%M %p}",
         "calendar": {
             "format": {
                 "days": "<span weight='normal'>{}</span>",
