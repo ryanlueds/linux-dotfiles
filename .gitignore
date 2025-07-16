@@ -16,3 +16,5 @@
 !dunst/**
 !hypr/**
 !quickshell/**
+!.zshrc
+!.tmux.conf
