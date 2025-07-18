@@ -27,9 +27,14 @@ window#waybar {
     min-width: 14px;
     margin: 0 5px;
     padding: 0;
-    background-color: #e4e4ef;
+    background-color: #e4e4ef; /* Default: white for occupied workspaces */
     color: #e4e4ef;
     transition: all 0.1s ease;
+}
+
+#workspaces button.empty {
+    background-color: #888888; /* Light gray for empty workspaces */
+    color: #888888;
 }
 
 #workspaces button:hover {
@@ -38,7 +43,7 @@ window#waybar {
 
 #workspaces button.active {
     min-width: 34px;
-    background-color: #cc8c3c;
+    background-color: #cc8c3c; /* Orange-brown for the active workspace */
     color: #cc8c3c;
     border-radius: 9px;
 }
