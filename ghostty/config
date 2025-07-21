@@ -7,7 +7,7 @@ theme = gruber-darker
 # macos-titlebar-style = hidden
 window-decoration = false
 
-background-opacity = 0.95
+# background-opacity = 0.95
 # Iosevka NF
 font-family = Iosevka NF
 # cursor-style = block_hollow
