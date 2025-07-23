@@ -1,13 +1,13 @@
-width=300
-height=320
+width=500
+height=36
 location=center
-show=drun
 filter_rate=100
+prompt=Search...
 term=ghostty
 allow_markup=true
 insensitive=true
 gtk_dark=true
 hide_scroll=true
-hide_search=true
+hide_search=false
 allow_images=true
 matching=strict-contains
