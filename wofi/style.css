@@ -2,6 +2,7 @@ window {
     margin: 0px;
     border: 1px solid #e4e4ef;
     background-color: rgba(24, 24, 24, 0.5);
+    font-size: 12px;
 }
 
 #input {
@@ -17,14 +18,8 @@ window {
 }
 
 #outer-box {
-    margin: 1px;
     border: none;
     background-color: rgba(24, 24, 24, 0.5);
-}
-
-#scroll {
-    margin: 0px;
-    border: none;
 }
 
 #text {
