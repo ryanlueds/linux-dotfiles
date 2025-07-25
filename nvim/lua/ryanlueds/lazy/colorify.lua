@@ -10,6 +10,7 @@ return {
             'conf';
             'scss';
             'lua';
+            'json';
             html = { mode = 'background' };
         }, { mode = 'background' })
     end
