@@ -1,7 +1,7 @@
 # ------------------------------ LOOK COOL  -----------------------------------
 autoload -U colors && colors
 
-PROMPT='[%n@%F{red}tetOS%f %~]$ %f'
+PROMPT='[%n@%F{red}ᓚᘏᗢ%f %~]$ %f'
 
 # eza n't this the coolest
 alias ls="eza --color=always --grid --git --no-filesize --icons=always --no-time --no-user --no-permissions --all --long"
@@ -62,3 +62,6 @@ load-nvmrc
 # ------------------------- CONVENIENT ---------------------------------
 alias vencord='sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)"'
 alias startpage='cd ~/.config/startpage && python -m http.server 6969'
+
+# my gpu isnt good nuff D:
+export TORCHINDUCTOR_DISABLE_MAX_AUTOTUNE_WARNING=1
