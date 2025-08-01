@@ -1,13 +1,6 @@
-# ignore everything
 *
 
-# include directories
-!*/
-
-# Whitelist the .gitignore file itself
 !.gitignore
-
-# whitelist these
 !ghostty/**
 !nvim/**
 !waybar/**
@@ -18,3 +11,5 @@
 !quickshell/**
 !.zshrc
 !.tmux.conf
+
+nvim/sounds/

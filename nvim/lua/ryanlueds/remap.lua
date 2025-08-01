@@ -81,3 +81,7 @@ vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>")
 vim.keymap.set('n', '<leader>h', ':bprevious<CR>', { desc = 'Go to previous buffer' })
 vim.keymap.set('n', '<leader>l', ':bnext<CR>', { desc = 'Go to next buffer' })
 vim.keymap.set("n", "<leader>x", ":bdelete<CR>")
+
+-- I NEED TO FORMAT C CODE TODO TODO TODO TODO UGLY UGLY UHLY
+vim.keymap.set("n", '<leader>f', ":!clang-format -i %<CR>", { desc = "Format file in place" })
+vim.keymap.set('v', '<leader>f', ":'<,'>!clang-format<CR>", { noremap = true, silent = true })

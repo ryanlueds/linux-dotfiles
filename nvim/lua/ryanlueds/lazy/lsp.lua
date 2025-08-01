@@ -42,7 +42,11 @@ return {
                 markdown = { "prettier" },
                 -- You can keep your other formatters here
                 -- lua = { "stylua" },
+                c = { "clangd" },
+                cpp = { "clangd" },
+                -- python = { "python-language-server" },
             },
+            format_on_save = false,
         })
 
         local cmp = require("cmp")

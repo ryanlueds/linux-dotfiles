@@ -9,11 +9,11 @@
             "top": 1,
 		},
         "color": {
-            "1": "blue",
+            "1": "magenta",
             "2": "red",
             "3": "blue",
             "4": "white",
-            "5": "black",
+            "5": "green",
         },
 	},
 	"display": {
@@ -22,8 +22,15 @@
 	"modules": [
 		"break",
 		{
+            		"type": "title",
+            		"keyIcon": "",
+			"key": "{#35}ᓚᘏᗢ {#keys}",
+            		//"key": "", // Title module has no key by default, so that icon is noUt displayed
+            		"format": "{user-name}@{host-name}"
+        	},
+		{
 			"type": "custom",
-			"format": "\u001b[90m┌──────────────────────Hardware──────────────────────┐",
+			"format": "\u001b[90m┌───────────────────────────────────────────────────────┐",
 		},
 		{
 			"type": "host",
@@ -41,21 +48,57 @@
 			"keyColor": "red",
 		},
 		{
-			"type": "memory",
-			"key": "└ └󰍛 ",
+        		"type": "disk",
+        		"key": "│ ├󰉉 ",
 			"keyColor": "red",
+        		//"format": "{size-used} / {size-total} ({files-percentage-bar})",
+			"percent": {
+				"type": 3,
+				"green": 30,
+				"yellow": 70
+			},
+      		},
+		{
+			"type": "memory",
+			"key": "│ ├ ",
+			"keyColor": "red",
+			"percent": {
+            			"type": 3,     // Show both percentage number and bar
+            			"green": 30,   // Values below 30% in green
+            			"yellow": 70   // 30-70% in yellow, >70% in red
+        		},
 		},
 		{
-			"type": "custom",
-			"format": "\u001b[90m└────────────────────────────────────────────────────┘",
+			"type": "swap",
+			"key": "│ ├󰓡 ",
+			"keyColor": "red",
+			"percent": {
+            			"type": 3,     // Show both percentage number and bar
+            			"green": 30,   // Values below 30% in green
+            			"yellow": 70   // 30-70% in yellow, >70% in red
+        		},
 		},
 		{
-			"type": "custom",
-			"format": "\u001b[90m┌──────────────────────Software──────────────────────┐",
+			"type": "battery",
+			"key": "└ └ ",
+			"keyColor": "red",
+			"percent": {
+				"type": 3,
+				"green": 30,
+				"yellow": 70
+			}
 		},
+		//{
+		//	"type": "custom",
+		//	"format": "\u001b[90m└───────────────────────────────────────────────────────┘",
+		//},
+		//{
+		//	"type": "custom",
+		//	"format": "\u001b[90m┌─────────Software──────────────────────────────────────┐",
+		//},
 		{
 			"type": "os",
-			"key": "􀣺 OS ",
+			"key": " OS ",
 			"keyColor": "green",
 		},
 		{
@@ -73,14 +116,14 @@
 			"key": "└ └ ",
 			"keyColor": "green",
 		},
-		{
-			"type": "de",
-			"key": " DE ",
-			"keyColor": "blue",
-		},
+		//{
+		//	"type": "de",
+		//	"key": " ausbdhaDE ",
+		//	"keyColor": "blue",
+		//},
 		{
 			"type": "lm",
-			"key": "│ ├ ",
+			"key": " DE ",
 			"keyColor": "blue",
 		},
 		{
@@ -104,28 +147,33 @@
 			"key": "└ └ ",
 			"keyColor": "blue",
 		},
-		{
-			"type": "custom",
-			"format": "\u001b[90m└────────────────────────────────────────────────────┘",
-		},
-		{
-			"type": "custom",
-			"format": "\u001b[90m┌────────────────────Uptime / Age────────────────────┐",
-		},
+		//{
+		//	"type": "custom",
+		//	"format": "\u001b[90m└───────────────────────────────────────────────────────┘",
+		//},
+		//{
+		//	"type": "custom",
+		//	"format": "\u001b[90m┌───────Uptime / Age────────────────────────────────────┐",
+		//},
 		{
 			"type": "command",
-			"key": "  OS Age",
-			"keyColor": "magenta",
+			"key": "󱛡 UP ",
+			"keyColor": "yellow",
 			"text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days",
 		},
 		{
 			"type": "uptime",
-			"key": "  Uptime",
-			"keyColor": "magenta",
+			"key": "└ └󰥔 ",
+			"keyColor": "yellow",
 		},
 		{
 			"type": "custom",
-			"format": "\u001b[90m└────────────────────────────────────────────────────┘",
+			"format": "\u001b[90m└───────────────────────────────────────────────────────┘",
 		},
+		{
+        	    "type": "colors",
+        	    "paddingLeft": 2,
+        	    "symbol": "circle"
+        	},
 	],
 }
