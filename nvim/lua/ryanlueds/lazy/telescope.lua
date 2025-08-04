@@ -43,28 +43,21 @@ return {
             print("Replaced occurrences of '" .. search_str .. "' with '" .. replace_str .. "' in the current buffer.")
         end, {})
 
-
-
-        vim.keymap.set('n', '<leader>ra', function()
-            vim.ui.input({ prompt = "Search for: " }, function(string_one)
-                if not string_one or string_one == "" then
-                    return
-                end
-                vim.ui.input({ prompt = "Replace with: " }, function(string_two)
-                    if not string_two then
-                        return
-                    end
-                    local command = 'cfdo %s/' .. string_one .. '/' .. string_two .. '/ge | update | bd'
-                    vim.cmd(command)
-                    print("Executed: " .. command)
-                end)
-            end)
-        end, {})
-
-
-
-
-
+        -- vim.keymap.set('n', '<leader>ra', function()
+        --     vim.ui.input({ prompt = "Search for: " }, function(string_one)
+        --         if not string_one or string_one == "" then
+        --             return
+        --         end
+        --         vim.ui.input({ prompt = "Replace with: " }, function(string_two)
+        --             if not string_two then
+        --                 return
+        --             end
+        --             local command = 'cfdo %s/' .. string_one .. '/' .. string_two .. '/ge | update | bd'
+        --             vim.cmd(command)
+        --             print("Executed: " .. command)
+        --         end)
+        --     end)
+        -- end, {})
     end
 }
 
