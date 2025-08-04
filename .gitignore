@@ -11,5 +11,3 @@
 !quickshell/**
 !.zshrc
 !.tmux.conf
-
-nvim/sounds/
