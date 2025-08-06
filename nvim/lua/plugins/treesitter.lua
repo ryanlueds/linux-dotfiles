@@ -1,14 +1,11 @@
 vim.pack.add({
-    {
-        src = "https://github.com/nvim-treesitter/nvim-treesitter",
-        version = "master",
-    },
+    { src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "master", },
 })
 
 require("nvim-treesitter.configs").setup({
     ensure_installed = {
         "lua", "vimdoc", "javascript", "typescript", "c", "lua", "rust",
-        "jsdoc", "bash", "markdown", "go", "python"
+        "jsdoc", "bash", "markdown", "go", "python",
     },
     auto_install = false,
     highlight = {

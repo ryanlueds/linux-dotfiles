@@ -11,3 +11,5 @@
 !quickshell/**
 !.zshrc
 !.tmux.conf
+
+# nvim/lsp

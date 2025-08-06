@@ -1,16 +1,3 @@
--- Temporarily changing Netrw garbo with neo-tree
--- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
--- Highlight when yanking (copying) text
---  Try it with `yap` in normal mode
---  See `:help vim.highlight.on_yank()`
-vim.api.nvim_create_autocmd("TextYankPost", {
-    desc = "Highlight when yanking (copying) text",
-    group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
-    callback = function()
-        vim.highlight.on_yank()
-    end,
-})
-
 vim.keymap.set("n", "<leader>td", function()
     vim.diagnostic.enable(not vim.diagnostic.is_enabled())
 end, { silent = true, noremap = true })
@@ -84,6 +71,11 @@ vim.keymap.set("n", "<leader>x", ":bdelete<CR>")
 -- vim.keymap.set("n", '<leader>f', ":!clang-format -i %<CR>", { desc = "Format file in place" })
 -- vim.keymap.set('v', '<leader>f', ":'<,'>!clang-format<CR>", { noremap = true, silent = true })
 
+vim.api.nvim_create_user_command("W", "w", {})
+vim.api.nvim_create_user_command("Wq", "wq", {})
+vim.api.nvim_create_user_command("Q", "q", {})
+vim.api.nvim_create_user_command("WQ", "wq", {})
+
 vim.api.nvim_create_user_command("RunCmd", function(opts)
     local raw_cmd = opts.args
     if raw_cmd == "" then return end
@@ -117,6 +109,7 @@ end, {
     nargs = "*",
     complete = "shellcmd"
 })
+
 vim.keymap.set('n', '<leader>r', function()
     vim.ui.input({ prompt = '[exec] ' }, function(input)
         if input and #input > 0 then
