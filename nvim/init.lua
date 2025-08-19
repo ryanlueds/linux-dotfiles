@@ -13,4 +13,4 @@ require('plugins.gitsigns') -- you are going soon...
 require('plugins.typst')
 require('plugins.gruber-darker')
 -- require('plugins.indent-blankline')
--- require('plugins.oil')
+require('plugins.oil')
