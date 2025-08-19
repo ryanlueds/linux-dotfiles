@@ -2,7 +2,7 @@
 
 !.gitignore
 !ghostty/**
-!nvim/**
+!nvim
 !waybar/**
 !wofi/**
 !fastfetch/**
