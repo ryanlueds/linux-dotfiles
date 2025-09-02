@@ -19,9 +19,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
 })
 
 vim.diagnostic.config({
-    virtual_lines = {
-        current_line = true,
-    },
+    -- virtual_lines = {
+    --     current_line = true,
+    -- },
 })
 
 vim.lsp.enable({ 'lua_ls', 'pyright', 'ts_ls', 'clangd', 'tinymist' })
