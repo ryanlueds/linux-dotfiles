@@ -14,6 +14,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
             vim.keymap.set('i', '<C-Space>', function()
                 vim.lsp.completion.get()
             end)
+            vim.keymap.set('n', '<C-Space>', function()
+                vim.lsp.completion.get()
+            end)
         end
     end,
 })
