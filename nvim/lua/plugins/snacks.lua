@@ -91,4 +91,5 @@ vim.keymap.set("n", "<leader>:", function()
     })
 end, { desc = "Command History" })
 
-vim.keymap.set("n", "gd", function() Snacks.picker.lsp_definitions() end, { desc = "" })
+vim.keymap.set("n", "gd", function() Snacks.picker.lsp_definitions() end, { desc = "Definitions" })
+vim.keymap.set("n", "gr", function() Snacks.picker.lsp_references() end, { desc = "References" })

@@ -110,12 +110,26 @@ end, {
     complete = "shellcmd"
 })
 
+local function get_run_command()
+    local ft = vim.bo.filetype
+    local file = vim.fn.expand('%')
+    local name = vim.fn.expand('%:r')
+
+    if ft == 'python' then
+        return string.format('python3 %s', file)
+    elseif ft == 'zig' then
+        return 'zig build'
+    else
+        vim.notify('Fix your nvim config, stupid: ' .. ft, vim.log.levels.WARN)
+        return nil
+    end
+end
+
 vim.keymap.set('n', '<leader>r', function()
-    vim.ui.input({ prompt = '[exec] ' }, function(input)
-        if input and #input > 0 then
-            vim.cmd('silent! RunCmd ' .. input)
-        end
-    end)
+    local cmd = get_run_command()
+    if cmd then
+        vim.cmd('silent! RunCmd ' .. cmd)
+    end
 end, { noremap = true })
 
 vim.keymap.set('n', '<C-h>', '<C-w>h', { noremap = true })

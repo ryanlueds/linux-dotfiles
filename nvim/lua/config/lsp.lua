@@ -27,7 +27,7 @@ vim.diagnostic.config({
     -- },
 })
 
-vim.lsp.enable({ 'lua_ls', 'pyright', 'ts_ls', 'clangd', 'tinymist' })
+vim.lsp.enable({ 'lua_ls', 'pyright', 'ts_ls', 'clangd', 'tinymist', 'zls' })
 
 
 -- require("lspconfig").qmlls.setup({
